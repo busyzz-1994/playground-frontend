@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken"
 
-const JWT_SECRET = process.env.JWT_SECRET || "540548050"
+const JWT_SECRET = process.env.JWT_SECRET!
 
 export interface JwtPayload {
   userId: number

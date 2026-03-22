@@ -2,7 +2,7 @@ import { NextResponse } from "next/server"
 import type { NextRequest } from "next/server"
 import { jwtVerify } from "jose"
 
-const JWT_SECRET = process.env.JWT_SECRET || "540548050"
+const JWT_SECRET = process.env.JWT_SECRET
 
 // 需要保护的路由前缀
 const protectedPaths = ["/dashboard", "/profile", "/settings", "/posts"]
