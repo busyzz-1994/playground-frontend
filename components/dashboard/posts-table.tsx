@@ -38,7 +38,6 @@ export function PostsTable() {
   const { data: currentUser } = useMe()
 
   const currentUserId = currentUser?.id
-
   function handleConfirmDelete() {
     if (deleteId === null) return
     deletePost(deleteId, {

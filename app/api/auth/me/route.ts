@@ -4,8 +4,7 @@ import { backendFetch } from "@/lib/api"
 export async function GET() {
   try {
     // 调用后端API验证用户，后端会检查数据库中用户是否存在
-    const res = await backendFetch("/api/user/me")
-
+    const res = await backendFetch("/api/users/me")
     if (!res.ok) {
       const data = await res.json()
       return NextResponse.json(
