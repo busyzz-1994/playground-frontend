@@ -37,8 +37,7 @@ export function PostsTable() {
   const { mutate: deletePost, isPending: isDeleting } = useDeletePost()
   const { data: currentUser } = useMe()
 
-  // The JWT payload returns { userId: number, email: string }
-  const currentUserId = (currentUser as unknown as { userId: number })?.userId
+  const currentUserId = currentUser?.id
 
   function handleConfirmDelete() {
     if (deleteId === null) return
